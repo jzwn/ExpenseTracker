@@ -1,4 +1,4 @@
-package com.expensetracker.backend.security;
+package com.ExpenseTracker.backend.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

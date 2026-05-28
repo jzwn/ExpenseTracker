@@ -1,6 +1,6 @@
-package com.expensetracker.backend.repository;
+package com.ExpenseTracker.backend.repository;
 
-import com.expensetracker.backend.model.User;
+import com.ExpenseTracker.backend.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 

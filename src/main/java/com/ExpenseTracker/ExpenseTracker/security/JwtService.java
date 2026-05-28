@@ -2,10 +2,11 @@ package com.ExpenseTracker.ExpenseTracker.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.security.Keys;
 
 import org.springframework.stereotype.Service;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import java.util.function.Function;
 
@@ -14,7 +15,7 @@ public class JwtService {
 
     // SECRET KEY
     private static final String SECRET_KEY =
-            "mysecretkeymysecretkey";
+            "mysecretkeymysecretkeymysecretkey1234";
 
     // GENERATE TOKEN
     public String generateToken(
@@ -22,18 +23,19 @@ public class JwtService {
 
         return Jwts.builder()
 
-                .setSubject(email)
+                .subject(email)
 
-                .setIssuedAt(new Date())
+                .issuedAt(new Date())
 
-                .setExpiration(
+                .expiration(
                         new Date(
                                 System.currentTimeMillis()
-                                        + 1000 * 60 * 60 * 24))
+                                        + 1000L * 60 * 60 * 24))
 
                 .signWith(
-                        SignatureAlgorithm.HS256,
-                        SECRET_KEY)
+                        Keys.hmacShaKeyFor(
+                                SECRET_KEY.getBytes(StandardCharsets.UTF_8)),
+                        Jwts.SIG.HS256)
 
                 .compact();
     }
@@ -64,11 +66,15 @@ public class JwtService {
 
         return Jwts.parser()
 
-                .setSigningKey(SECRET_KEY)
+                .verifyWith(
+                        Keys.hmacShaKeyFor(
+                                SECRET_KEY.getBytes(StandardCharsets.UTF_8)))
 
-                .parseClaimsJws(token)
+                .build()
 
-                .getBody();
+                .parseSignedClaims(token)
+
+                .getPayload();
     }
 
     // VALIDATE TOKEN
