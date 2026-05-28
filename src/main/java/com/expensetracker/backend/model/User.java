@@ -21,4 +21,6 @@ public class User {
     private String name;
     private Double monthlyIncome;
     private LocalDateTime createdAt = LocalDateTime.now();
+
+    /* code completed */
 }
