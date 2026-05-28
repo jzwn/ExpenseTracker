@@ -1,4 +1,4 @@
-package com.ExpenseTracker.backend.security;
+package com.expensetracker.backend.security;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;

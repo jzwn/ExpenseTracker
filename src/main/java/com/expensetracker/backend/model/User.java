@@ -1,4 +1,4 @@
-package com.ExpenseTracker.backend.model;
+package com.expensetracker.backend.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;

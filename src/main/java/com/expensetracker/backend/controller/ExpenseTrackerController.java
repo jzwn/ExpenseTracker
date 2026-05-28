@@ -1,7 +1,7 @@
-package com.ExpenseTracker.backend.controller;
+package com.expensetracker.backend.controller;
 
-import com.ExpenseTracker.backend.entity.ExpenseTracker;
-import com.ExpenseTracker.backend.service.ExpenseTrackerService;
+import com.expensetracker.backend.entity.ExpenseTracker;
+import com.expensetracker.backend.service.ExpenseTrackerService;
 
 import org.springframework.web.bind.annotation.*;
 

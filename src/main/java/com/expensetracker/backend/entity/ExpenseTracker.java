@@ -1,6 +1,6 @@
-package com.ExpenseTracker.backend.entity;
+package com.expensetracker.backend.entity;
 
-import com.ExpenseTracker.backend.model.User;
+import com.expensetracker.backend.model.User;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;

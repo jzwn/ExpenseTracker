@@ -1,7 +1,7 @@
-package com.ExpenseTracker.backend.service;
+package com.expensetracker.backend.service;
 
-import com.ExpenseTracker.backend.entity.ExpenseTracker;
-import com.ExpenseTracker.backend.repository.ExpenseTrackerRepository;
+import com.expensetracker.backend.entity.ExpenseTracker;
+import com.expensetracker.backend.repository.ExpenseTrackerRepository;
 
 import org.springframework.stereotype.Service;
 

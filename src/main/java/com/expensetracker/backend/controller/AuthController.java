@@ -1,10 +1,10 @@
-package com.ExpenseTracker.backend.controller;
+package com.expensetracker.backend.controller;
 
-import com.ExpenseTracker.backend.dto.LoginRequest;
-import com.ExpenseTracker.backend.dto.RegisterRequest;
-import com.ExpenseTracker.backend.model.User;
-import com.ExpenseTracker.backend.repository.UserRepository;
-import com.ExpenseTracker.backend.security.JwtUtil;
+import com.expensetracker.backend.dto.LoginRequest;
+import com.expensetracker.backend.dto.RegisterRequest;
+import com.expensetracker.backend.model.User;
+import com.expensetracker.backend.repository.UserRepository;
+import com.expensetracker.backend.security.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;

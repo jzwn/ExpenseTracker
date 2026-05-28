@@ -1,4 +1,4 @@
-package com.ExpenseTracker.backend.dto;
+package com.expensetracker.backend.dto;
 
 public class RegisterRequest {
     private String name;
