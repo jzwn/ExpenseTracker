@@ -1,7 +1,7 @@
-package com.ExpenseTracker.ExpenseTracker.controller;
+package com.ExpenseTracker.backend.controller;
 
-import com.ExpenseTracker.ExpenseTracker.entity.ExpenseTracker;
-import com.ExpenseTracker.ExpenseTracker.service.ExpenseTrackerService;
+import com.ExpenseTracker.backend.entity.ExpenseTracker;
+import com.ExpenseTracker.backend.service.ExpenseTrackerService;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -94,3 +94,4 @@ public class ExpenseTrackerController {
                 .getExpensesByMonth(start, end);
     }
 }
+

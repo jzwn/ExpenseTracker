@@ -1,7 +1,7 @@
-package com.ExpenseTracker.ExpenseTracker.service;
+package com.ExpenseTracker.backend.service;
 
-import com.ExpenseTracker.ExpenseTracker.entity.ExpenseTracker;
-import com.ExpenseTracker.ExpenseTracker.repository.ExpenseTrackerRepository;
+import com.ExpenseTracker.backend.entity.ExpenseTracker;
+import com.ExpenseTracker.backend.repository.ExpenseTrackerRepository;
 
 import org.springframework.stereotype.Service;
 
@@ -90,6 +90,7 @@ public class ExpenseTrackerService {
     // GET EXPENSES BY MONTH
     public List<ExpenseTracker>
     getExpensesByMonth(
+
             LocalDate start,
             LocalDate end) {
 
@@ -97,3 +98,4 @@ public class ExpenseTrackerService {
                 .findByDateBetween(start, end);
     }
 }
+

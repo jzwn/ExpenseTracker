@@ -1,5 +1,6 @@
-package com.ExpenseTracker.ExpenseTracker.entity;
+package com.ExpenseTracker.backend.entity;
 
+import com.ExpenseTracker.backend.model.User;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -24,7 +25,6 @@ public class ExpenseTracker {
 
     // MANY EXPENSES BELONG TO ONE USER
     @ManyToOne
-
     @JoinColumn(name = "user_id")
     private User user;
 

@@ -1,6 +1,6 @@
-package com.ExpenseTracker.ExpenseTracker.repository;
+package com.ExpenseTracker.backend.repository;
 
-import com.ExpenseTracker.ExpenseTracker.entity.ExpenseTracker;
+import com.ExpenseTracker.backend.entity.ExpenseTracker;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -16,3 +16,4 @@ public interface ExpenseTrackerRepository
             LocalDate start,
             LocalDate end);
 }
+
